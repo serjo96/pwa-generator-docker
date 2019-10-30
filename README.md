@@ -32,7 +32,7 @@ $ docker-compose down --rmi all
 
  - login - `napad29272@mail8app.com`
 
- - password - `qwerty`
+ - password - `qwerty123`
  
  ---
 
