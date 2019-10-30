@@ -26,9 +26,27 @@ This command stops and removes all images.
 $ docker-compose down --rmi all
 ```
 
+If you don't wanna run project by docker, you may use bash script
+
+```bash
+sh run.sh
+```
+
+> **Require node version "^8.13.0 || >=10.10.0".**
+
+> **Require imagemagick software.**
+>
+> You may download it [here](https://imagemagick.org/script/download.php).
+>
+>Or use ```brew install imagemagick```
+>
+>Or just run this script, and imagemagick will be installed automatically, for all os except windows
+
+
+
 ----
 
-####Test account: 
+#### Test account: 
 
  - login - `napad29272@mail8app.com`
 
