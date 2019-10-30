@@ -32,6 +32,11 @@ If you don't wanna run project by docker, you may use bash script
 sh run.sh
 ```
 
+On windows you may use **git bash terminal** and run there 
+```bash
+bash run.sh
+```
+
 > **Require node version "^8.13.0 || >=10.10.0".**
 
 > **Require imagemagick software.**
