@@ -43,3 +43,7 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 dist
+
+#lock files
+*yarn.lock
+*packages-lock.json
