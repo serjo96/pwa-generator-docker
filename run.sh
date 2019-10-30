@@ -54,13 +54,13 @@ function echo_if {
 
 function installImagemagick {
 
-if [[ $(program_is_installed convert) ]]; then
+if [[ $(program_is_installed convert) == 1 ]]; then
             echo_pass 'imagemagick already have'
     else
-        if [[ $(program_is_installed brew) ]]; then
+        if [[ $(program_is_installed brew) == 1 ]]; then
             brew install imagemagick
         else
-            if [[ $(program_is_installed apt-get) ]]; then
+            if [[ $(program_is_installed apt-get) == 1 ]]; then
                 apt-get install imagemagick
             else
                 echo_fail '️You must install imagemagick manually \nhttps://imagemagick.org/script/download.php \nInstall and run again. ✨'
@@ -75,7 +75,7 @@ function runBackend {
 
     installImagemagick
 
-    if [[ $(program_is_installed yarn) ]]; then
+    if [[ $(program_is_installed yarn) == 1 ]]; then
         yarn install
         yarn start
     else
@@ -86,7 +86,7 @@ function runBackend {
 
 function runFrontEnd {
     cd front-end/
-    if [[ $(program_is_installed yarn) ]]; then
+    if [[ $(program_is_installed yarn) == 1 ]]; then
         yarn install
         yarn serve
     else
