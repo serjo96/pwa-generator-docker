@@ -28,7 +28,7 @@
                                             <v-card-title primary-title>{{app.formData.stageOne.appName}}</v-card-title>
 											<span class="py-2 pa-2">
 												<v-text-field
-														:value="app.links.link"
+														:value="`${url}/${app.userName}/${app.formData.stageOne.appName}`"
 														readonly
 														hide-details
 														class="pa-2 py-2"
