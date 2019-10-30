@@ -6,14 +6,14 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
 
-<!--            <v-toolbar-items>-->
-<!--                <v-btn to="/push-messages">push messaging</v-btn>-->
-<!--            </v-toolbar-items>-->
+            <v-toolbar-items>
+                <v-btn to="/push-messages">push messaging</v-btn>
+            </v-toolbar-items>
             <v-toolbar-items>
                 <v-btn to="/admin/create-template">Create template</v-btn>
             </v-toolbar-items>
             <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn @click="logOut">Выйти</v-btn>
+                <v-btn @click="logOut">logout</v-btn>
             </v-toolbar-items>
         </v-toolbar>
     </header>

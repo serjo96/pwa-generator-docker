@@ -8,7 +8,7 @@
                             editable
                             :complete="step > 1"
                             step="1"
-                    >Общее</v-stepper-step>
+                    >General</v-stepper-step>
 
                     <v-divider></v-divider>
 
@@ -16,7 +16,7 @@
                             editable
                             :complete="step > 2"
                             step="2"
-                    >Оценки</v-stepper-step>
+                    >Raring</v-stepper-step>
 
                     <v-divider></v-divider>
 
@@ -24,7 +24,7 @@
                             editable
                             :complete="step > 3"
                             step="3"
-                    >Описание</v-stepper-step>
+                    >Description</v-stepper-step>
 
                     <v-divider></v-divider>
 
@@ -40,7 +40,7 @@
                             editable
                             :complete="step > 5"
                             step="5"
-                    >Скриншоты</v-stepper-step>
+                    >Screenshots</v-stepper-step>
 
                     <v-divider></v-divider>
 
@@ -48,7 +48,7 @@
                             editable
                             :complete="step > 6"
                             step="6"
-                    >Отзывы</v-stepper-step>
+                    >Reviews</v-stepper-step>
 
 
                 </v-stepper-header>
