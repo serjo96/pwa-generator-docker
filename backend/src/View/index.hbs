@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="{{{ i18n "setLocale" lang }}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ formData.stageOne.appName }}</title>
+    <style type="text/css" id="vuetify-theme-stylesheet">a { color: #1976d2; }.primary {   background-color: #1976d2 !important;   border-color: #1976d2 !important; }.primary--text {   color: #1976d2 !important;   caret-color: #1976d2 !important; }.primary.lighten-5 {   background-color: #c7fdff !important;   border-color: #c7fdff !important; }.primary--text.text--lighten-5 {   color: #c7fdff !important;   caret-color: #c7fdff !important; }.primary.lighten-4 {   background-color: #a8e0ff !important;   border-color: #a8e0ff !important; }.primary--text.text--lighten-4 {   color: #a8e0ff !important;   caret-color: #a8e0ff !important; }.primary.lighten-3 {   background-color: #8ac5ff !important;   border-color: #8ac5ff !important; }.primary--text.text--lighten-3 {   color: #8ac5ff !important;   caret-color: #8ac5ff !important; }.primary.lighten-2 {   background-color: #6aaaff !important;   border-color: #6aaaff !important; }.primary--text.text--lighten-2 {   color: #6aaaff !important;   caret-color: #6aaaff !important; }.primary.lighten-1 {   background-color: #488fef !important;   border-color: #488fef !important; }.primary--text.text--lighten-1 {   color: #488fef !important;   caret-color: #488fef !important; }.primary.darken-1 {   background-color: #005eb6 !important;   border-color: #005eb6 !important; }.primary--text.text--darken-1 {   color: #005eb6 !important;   caret-color: #005eb6 !important; }.primary.darken-2 {   background-color: #00479b !important;   border-color: #00479b !important; }.primary--text.text--darken-2 {   color: #00479b !important;   caret-color: #00479b !important; }.primary.darken-3 {   background-color: #003180 !important;   border-color: #003180 !important; }.primary--text.text--darken-3 {   color: #003180 !important;   caret-color: #003180 !important; }.primary.darken-4 {   background-color: #001e67 !important;   border-color: #001e67 !important; }.primary--text.text--darken-4 {   color: #001e67 !important;   caret-color: #001e67 !important; }.secondary {   background-color: #424242 !important;   border-color: #424242 !important; }.secondary--text {   color: #424242 !important;   caret-color: #424242 !important; }.secondary.lighten-5 {   background-color: #c1c1c1 !important;   border-color: #c1c1c1 !important; }.secondary--text.text--lighten-5 {   color: #c1c1c1 !important;   caret-color: #c1c1c1 !important; }.secondary.lighten-4 {   background-color: #a6a6a6 !important;   border-color: #a6a6a6 !important; }.secondary--text.text--lighten-4 {   color: #a6a6a6 !important;   caret-color: #a6a6a6 !important; }.secondary.lighten-3 {   background-color: #8b8b8b !important;   border-color: #8b8b8b !important; }.secondary--text.text--lighten-3 {   color: #8b8b8b !important;   caret-color: #8b8b8b !important; }.secondary.lighten-2 {   background-color: #727272 !important;   border-color: #727272 !important; }.secondary--text.text--lighten-2 {   color: #727272 !important;   caret-color: #727272 !important; }.secondary.lighten-1 {   background-color: #595959 !important;   border-color: #595959 !important; }.secondary--text.text--lighten-1 {   color: #595959 !important;   caret-color: #595959 !important; }.secondary.darken-1 {   background-color: #2c2c2c !important;   border-color: #2c2c2c !important; }.secondary--text.text--darken-1 {   color: #2c2c2c !important;   caret-color: #2c2c2c !important; }.secondary.darken-2 {   background-color: #171717 !important;   border-color: #171717 !important; }.secondary--text.text--darken-2 {   color: #171717 !important;   caret-color: #171717 !important; }.secondary.darken-3 {   background-color: #000000 !important;   border-color: #000000 !important; }.secondary--text.text--darken-3 {   color: #000000 !important;   caret-color: #000000 !important; }.secondary.darken-4 {   background-color: #000000 !important;   border-color: #000000 !important; }.secondary--text.text--darken-4 {   color: #000000 !important;   caret-color: #000000 !important; }.accent {   background-color: #82b1ff !important;   border-color: #82b1ff !important; }.accent--text {   color: #82b1ff !important;   caret-color: #82b1ff !important; }.accent.lighten-5 {   background-color: #ffffff !important;   border-color: #ffffff !important; }.accent--text.text--lighten-5 {   color: #ffffff !important;   caret-color: #ffffff !important; }.accent.lighten-4 {   background-color: #f8ffff !important;   border-color: #f8ffff !important; }.accent--text.text--lighten-4 {   color: #f8ffff !important;   caret-color: #f8ffff !important; }.accent.lighten-3 {   background-color: #daffff !important;   border-color: #daffff !important; }.accent--text.text--lighten-3 {   color: #daffff !important;   caret-color: #daffff !important; }.accent.lighten-2 {   background-color: #bce8ff !important;   border-color: #bce8ff !important; }.accent--text.text--lighten-2 {   color: #bce8ff !important;   caret-color: #bce8ff !important; }.accent.lighten-1 {   background-color: #9fccff !important;   border-color: #9fccff !important; }.accent--text.text--lighten-1 {   color: #9fccff !important;   caret-color: #9fccff !important; }.accent.darken-1 {   background-color: #6596e2 !important;   border-color: #6596e2 !important; }.accent--text.text--darken-1 {   color: #6596e2 !important;   caret-color: #6596e2 !important; }.accent.darken-2 {   background-color: #467dc6 !important;   border-color: #467dc6 !important; }.accent--text.text--darken-2 {   color: #467dc6 !important;   caret-color: #467dc6 !important; }.accent.darken-3 {   background-color: #2364aa !important;   border-color: #2364aa !important; }.accent--text.text--darken-3 {   color: #2364aa !important;   caret-color: #2364aa !important; }.accent.darken-4 {   background-color: #004c90 !important;   border-color: #004c90 !important; }.accent--text.text--darken-4 {   color: #004c90 !important;   caret-color: #004c90 !important; }.error {   background-color: #ff5252 !important;   border-color: #ff5252 !important; }.error--text {   color: #ff5252 !important;   caret-color: #ff5252 !important; }.error.lighten-5 {   background-color: #ffe4d5 !important;   border-color: #ffe4d5 !important; }.error--text.text--lighten-5 {   color: #ffe4d5 !important;   caret-color: #ffe4d5 !important; }.error.lighten-4 {   background-color: #ffc6b9 !important;   border-color: #ffc6b9 !important; }.error--text.text--lighten-4 {   color: #ffc6b9 !important;   caret-color: #ffc6b9 !important; }.error.lighten-3 {   background-color: #ffa99e !important;   border-color: #ffa99e !important; }.error--text.text--lighten-3 {   color: #ffa99e !important;   caret-color: #ffa99e !important; }.error.lighten-2 {   background-color: #ff8c84 !important;   border-color: #ff8c84 !important; }.error--text.text--lighten-2 {   color: #ff8c84 !important;   caret-color: #ff8c84 !important; }.error.lighten-1 {   background-color: #ff6f6a !important;   border-color: #ff6f6a !important; }.error--text.text--lighten-1 {   color: #ff6f6a !important;   caret-color: #ff6f6a !important; }.error.darken-1 {   background-color: #df323b !important;   border-color: #df323b !important; }.error--text.text--darken-1 {   color: #df323b !important;   caret-color: #df323b !important; }.error.darken-2 {   background-color: #bf0025 !important;   border-color: #bf0025 !important; }.error--text.text--darken-2 {   color: #bf0025 !important;   caret-color: #bf0025 !important; }.error.darken-3 {   background-color: #9f0010 !important;   border-color: #9f0010 !important; }.error--text.text--darken-3 {   color: #9f0010 !important;   caret-color: #9f0010 !important; }.error.darken-4 {   background-color: #800000 !important;   border-color: #800000 !important; }.error--text.text--darken-4 {   color: #800000 !important;   caret-color: #800000 !important; }.info {   background-color: #2196f3 !important;   border-color: #2196f3 !important; }.info--text {   color: #2196f3 !important;   caret-color: #2196f3 !important; }.info.lighten-5 {   background-color: #d4ffff !important;   border-color: #d4ffff !important; }.info--text.text--lighten-5 {   color: #d4ffff !important;   caret-color: #d4ffff !important; }.info.lighten-4 {   background-color: #b5ffff !important;   border-color: #b5ffff !important; }.info--text.text--lighten-4 {   color: #b5ffff !important;   caret-color: #b5ffff !important; }.info.lighten-3 {   background-color: #95e8ff !important;   border-color: #95e8ff !important; }.info--text.text--lighten-3 {   color: #95e8ff !important;   caret-color: #95e8ff !important; }.info.lighten-2 {   background-color: #75ccff !important;   border-color: #75ccff !important; }.info--text.text--lighten-2 {   color: #75ccff !important;   caret-color: #75ccff !important; }.info.lighten-1 {   background-color: #51b0ff !important;   border-color: #51b0ff !important; }.info--text.text--lighten-1 {   color: #51b0ff !important;   caret-color: #51b0ff !important; }.info.darken-1 {   background-color: #007cd6 !important;   border-color: #007cd6 !important; }.info--text.text--darken-1 {   color: #007cd6 !important;   caret-color: #007cd6 !important; }.info.darken-2 {   background-color: #0064ba !important;   border-color: #0064ba !important; }.info--text.text--darken-2 {   color: #0064ba !important;   caret-color: #0064ba !important; }.info.darken-3 {   background-color: #004d9f !important;   border-color: #004d9f !important; }.info--text.text--darken-3 {   color: #004d9f !important;   caret-color: #004d9f !important; }.info.darken-4 {   background-color: #003784 !important;   border-color: #003784 !important; }.info--text.text--darken-4 {   color: #003784 !important;   caret-color: #003784 !important; }.success {   background-color: #01875f !important;   border-color: #01875f !important; }.success--text {   color: #01875f !important;   caret-color: #01875f !important; }.success.lighten-5 {   background-color: #a8ffe4 !important;   border-color: #a8ffe4 !important; }.success--text.text--lighten-5 {   color: #a8ffe4 !important;   caret-color: #a8ffe4 !important; }.success.lighten-4 {   background-color: #8bf6c8 !important;   border-color: #8bf6c8 !important; }.success--text.text--lighten-4 {   color: #8bf6c8 !important;   caret-color: #8bf6c8 !important; }.success.lighten-3 {   background-color: #6ed9ac !important;   border-color: #6ed9ac !important; }.success--text.text--lighten-3 {   color: #6ed9ac !important;   caret-color: #6ed9ac !important; }.success.lighten-2 {   background-color: #51bd92 !important;   border-color: #51bd92 !important; }.success--text.text--lighten-2 {   color: #51bd92 !important;   caret-color: #51bd92 !important; }.success.lighten-1 {   background-color: #32a278 !important;   border-color: #32a278 !important; }.success--text.text--lighten-1 {   color: #32a278 !important;   caret-color: #32a278 !important; }.success.darken-1 {   background-color: #006d47 !important;   border-color: #006d47 !important; }.success--text.text--darken-1 {   color: #006d47 !important;   caret-color: #006d47 !important; }.success.darken-2 {   background-color: #005431 !important;   border-color: #005431 !important; }.success--text.text--darken-2 {   color: #005431 !important;   caret-color: #005431 !important; }.success.darken-3 {   background-color: #003c1b !important;   border-color: #003c1b !important; }.success--text.text--darken-3 {   color: #003c1b !important;   caret-color: #003c1b !important; }.success.darken-4 {   background-color: #002702 !important;   border-color: #002702 !important; }.success--text.text--darken-4 {   color: #002702 !important;   caret-color: #002702 !important; }.warning {   background-color: #fb8c00 !important;   border-color: #fb8c00 !important; }.warning--text {   color: #fb8c00 !important;   caret-color: #fb8c00 !important; }.warning.lighten-5 {   background-color: #ffff9e !important;   border-color: #ffff9e !important; }.warning--text.text--lighten-5 {   color: #ffff9e !important;   caret-color: #ffff9e !important; }.warning.lighten-4 {   background-color: #fffb82 !important;   border-color: #fffb82 !important; }.warning--text.text--lighten-4 {   color: #fffb82 !important;   caret-color: #fffb82 !important; }.warning.lighten-3 {   background-color: #ffdf67 !important;   border-color: #ffdf67 !important; }.warning--text.text--lighten-3 {   color: #ffdf67 !important;   caret-color: #ffdf67 !important; }.warning.lighten-2 {   background-color: #ffc24b !important;   border-color: #ffc24b !important; }.warning--text.text--lighten-2 {   color: #ffc24b !important;   caret-color: #ffc24b !important; }.warning.lighten-1 {   background-color: #ffa72d !important;   border-color: #ffa72d !important; }.warning--text.text--lighten-1 {   color: #ffa72d !important;   caret-color: #ffa72d !important; }.warning.darken-1 {   background-color: #db7200 !important;   border-color: #db7200 !important; }.warning--text.text--darken-1 {   color: #db7200 !important;   caret-color: #db7200 !important; }.warning.darken-2 {   background-color: #bb5900 !important;   border-color: #bb5900 !important; }.warning--text.text--darken-2 {   color: #bb5900 !important;   caret-color: #bb5900 !important; }.warning.darken-3 {   background-color: #9d4000 !important;   border-color: #9d4000 !important; }.warning--text.text--darken-3 {   color: #9d4000 !important;   caret-color: #9d4000 !important; }.warning.darken-4 {   background-color: #802700 !important;   border-color: #802700 !important; }.warning--text.text--darken-4 {   color: #802700 !important;   caret-color: #802700 !important; } .progr_blck{ min-height:50px;width:100% !important; /*display: none;*/ } .ldBar-label{display:none;}</style>
+</head>
+<body>
+<div id="page-loader" class="page-preloader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+<div id="market-wrap" class="is-hidden">
+    <div data-app="true" class="application theme--light" id="app">
+        <div class="v-menu__content theme--light " style="min-width: 0px; top: 12px; left: 0px; transform-origin: left top 0px; z-index: 0; display: none;">
+            <div role="list" class="v-list theme--light">
+                <div role="listitem">
+                    <a class="v-list__tile v-list__tile--link v-list__tile--avatar theme--light">
+                        <div class="v-list__tile__avatar">
+                            <div class="v-avatar" style="height: 40px; width: 40px;">
+                                <i aria-hidden="true" class="v-icon material-icons theme--light grey--text text--darken-2">share</i>
+                            </div>
+                        </div>
+                        <div class="v-list__tile__content">{{{ i18n "__" "share" }}}</div>
+                    </a>
+                </div>
+                <div role="listitem">
+                    <a class="v-list__tile v-list__tile--link v-list__tile--avatar theme--light">
+                        <div class="v-list__tile__avatar">
+                            <div class="v-avatar" style="height: 40px; width: 40px;">
+                                <i aria-hidden="true" class="v-icon material-icons theme--light grey--text text--darken-2">bookmark_border</i>
+                            </div>
+                        </div>
+                        <div class="v-list__tile__content">{{{ i18n "__" "add to wishlist" }}}</div>
+                    </a>
+                </div>
+                <div role="listitem">
+                    <a class="v-list__tile v-list__tile--link v-list__tile--avatar theme--light">
+                        <div class="v-list__tile__avatar">
+                            <div class="v-avatar" style="height: 40px; width: 40px;">
+                                <i aria-hidden="true" class="v-icon material-icons theme--light grey--text text--darken-2">flag</i>
+                            </div>
+                        </div>
+                        <div class="v-list__tile__content">{{{ i18n "__" "report" }}}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="application--wrap">
+            <nav class="v-toolbar v-toolbar--fixed theme--light" style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);" data-booted="true">
+                <div class="v-toolbar__content" style="height: 64px;">
+                    <button type="button" class="v-btn v-btn--flat v-btn--icon theme--light grey--text text--darken-2">
+                        <div class="v-btn__content">
+                            <i aria-hidden="true" class="v-icon material-icons theme--light">arrow_back</i>
+                        </div>
+                    </button>
+                    <div class="spacer">
+                    </div>
+                    <button type="button" class="v-btn v-btn--flat v-btn--icon theme--light grey--text text--darken-2">
+                        <div class="v-btn__content">
+                            <i aria-hidden="true" class="v-icon material-icons theme--light">search</i>
+                        </div>
+                    </button>
+                    <div class="v-menu v-menu--inline">
+                        <div class="v-menu__activator">
+                            <button type="button" class="v-btn v-btn--flat v-btn--icon theme--light grey--text text--darken-2">
+                                <div class="v-btn__content">
+                                    <i aria-hidden="true" class="v-icon material-icons theme--light">more_vert</i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <main class="v-content" style="padding: 64px 0px 0px;" data-booted="true">
+                <div class="v-content__wrap">
+                    <div class="container fluid pa-0">
+                        <div class="layout rows wrap">
+                            <div class="flex xs12 px-4 pt-4">
+                                <div class="layout rows">
+                                    <div class="flex pr-4 shrink">
+                                        <img src="images/appLogo.png" height="80">
+                                    </div>
+                                    <div class="flex text-xs-left">
+                                        <div class="layout rows wrap">
+                                            <div class="flex xs12">
+                                                <h2 class="font-weight-medium" style="line-height: 22px;">{{ formData.stageOne.appName }}</h2>
+                                            </div>
+                                            <div class="flex xs12 pb-2">
+                                                <h4 class="font-weight-medium success--text">{{ formData.stageOne.shortAppName }}</h4>
+                                            </div>
+                                            <div class="flex xs12">
+                                                <div class="layout rows wrap">
+                                                    <div class="flex shrink">
+                                                        <span tabindex="0" class="v-chip v-chip--outline v-chip--small theme--light grey lighten-1 grey--text text--lighten-1">
+                                                            <span class="v-chip__content">
+                                                                <span class="black--text font-weight-light">{{ formData.stageOne.categorySelect }}</span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex shrink">
+                                                        <span tabindex="0" class="v-chip v-chip--outline v-chip--small theme--light grey lighten-1 grey--text text--lighten-1">
+                                                            <span class="v-chip__content">
+                                                                <span class="black--text font-weight-light">{{{ i18n "__" "popular" }}}, №1</span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-loading" id="progress-text"></div>
+                            <div class="flex xs12">
+                                <div class="pa-3">
+                                    <div class="layout rows wrap">
+                                        <div id="block_vbutton" class="flex text-xs-right xs12">
+                                            <button type="button" id="vbtn_adds" class="v-btn theme--dark success" style="min-width:90px !improtant;">
+                                                <div class="v-btn__content" id="vbtn_adds_txt">{{{ i18n "__" "install" }}}</div>
+                                            </button>
+                                        </div>
+
+                                        <div id="block_vprogr" class="progr_blck flex xs12" style="width: 100%;height:100%;display:none">
+
+                                            <div class="layout rows wrap">
+                                                <div class="flex xs11" style="height:67px !important;">
+                                                    <div data-value="0" id="bprogress" data-preset="line" style="margin-top: 0px; padding-left:0px !important;margin-left:0px !important; width:100% !important; height:100%;color:#5f5f5f;" align="left" class="ldBar" data-duration="1" data-stroke-width="1" data-stroke-trail-width="1" data-min="0" data-max="100">{{ DOWNLOADING }}</div>
+                                                </div>
+                                                <div class="flex xs1"><img src="./images/close_btn.png" style="border:0px !important;"></div>
+                                            </div>
+                                            <div style="width:100%;" align="center"><img src="./images/play_protected.png" style="padding-right:5px;padding-bottom:3px;border:0px !important;vertical-align: middle;">{{{ i18n "__" "tested with Play protections" }}}</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <hr class="v-divider theme--light">
+                            </div>
+                            <div class="flex xs12">
+                                <div class="pa-3">
+                                    <div class="layout rows wrap">
+                                        <div class="flex text-xs-center xs3 px-1">
+                                            <div>
+                                                <div class="layout">
+                                                    <div class="flex text-xs-right xs6 pr-1">
+                                                        <span class="subheading font-weight-black">4,6</span>
+                                                    </div>
+                                                    <div class="flex xs6">
+                                                        <i aria-hidden="true" class="v-icon material-icons theme--light black--text" style="position: relative; top: -3px;">star_rate</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>{{ formData.stageOne.ratingNumbers }}</div>
+                                        </div>
+                                        <div class="flex text-xs-center xs3 px-1">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAABxklEQVRYR+2WO2vCUBSAr/jCFz4GQUVn0cW56CL4A4JBrBnEH9HBCBZqB/9DoUtSKGLnLl0E5y5C5yIUSkGEIhShkPYEUoKc2JMb1BYcvukm5/vI64ZpmsbK5fIkEAis/H7/xz4AFzjBrctdLtcnL4yx7yl8VCqVCYMabDAVbDAVcDO4JNhgKthgKuA+Bvy/gFgstmi1WoooiiMzkiQpXq93jYms4ArI5XLP8P5i6E81IrKCKyCbzR4DDhuQyWTmmBzQByIiK0gBwWBwlUgk3qLR6DISiSwLhcIMkwPpdHoej8cXcHwymXz9LYgU4PF41tPp9AQTbmM4HJ5hUjOkAANFUSRMhNHtdi8x4SY/AdgiBiVClmWSHLAdAKiqeoqJgV6vd4GdYwVXAIBF9Pv9c+zYbXAHAObbwSMHHAUA4/FYGAwGMrZGwXGA2+22tftt4jjAKaSAYrE4a7fb17Df26HT6VzBZxubaUAKEAThzvy026FUKj1iMw1IAfl8/qnRaNzW6/WRHZrN5k0qlXrBZhqQAnbJ3wjw+XwHC9DdsN9ji/tAd1er1QdscR/obnhdarXaPfzxhEKh93A4vFPAAS5waprGvgCAovJmeays5QAAAABJRU5ErkJggg==" height="18">
+                                            <br>
+                                            <span>{{ formData.stageOne.appSize }}{{i18n "__" "size type"}}</span>
+                                        </div>
+                                        <div class="flex text-xs-center xs3 px-1">
+                                            <img src="data:image/webp;base64,UklGRjwBAABXRUJQVlA4TC8BAAAvG8AEELXArm3b2POFPaSrvKYHVsAnFWDbtm3btm1/+P+/gzg79v49BoGkje/f+ZsABW3bMPwB7XB7ngDrCwEatL4W+MVxiAOo+WMZEJg9nEPt+8DzLkTxCMExyB3UIQ/lmocSg9QQgA/qIA4IZYYjZMAPAP7/AS+tIhrAOMgd5GMOUvvYBsQn6AawCF4DeSDngWpIGc7wbw4HcDsAVznCwF0AOSBXgEaQ3B94/iWZAeAQFLcAGEQtMhEJeCMnksAnqXTImAG7oAMgqdIMAKyAg+hCGQRERQ9aoco0AKyAJL/QAFKFPQC2sQOK54EqqOQG4JeSHwPYhApH2Adgj1eTKQ6toKyMCThBDyDtD5Vm0ISH81hAIUohLka/FBmo9kNA4Jbw8aTmDy2sL6FB62sA" height="18">
+                                            <br>
+                                            <span>{{ formData.stageOne.ageRestrictions }}</span>
+                                        </div>
+                                        <div class="flex text-xs-center xs3 px-1">
+                                            <span class="subheading font-weight-black" style="white-space: nowrap;">{{ formData.stageOne.appInstallCount }}</span>
+                                            <br>
+                                            <span>{{{ i18n "__" "downloads count" }}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="v-divider theme--light">
+                            </div>
+                            <div class="flex px-3 pt-3 pb-0 xs12">
+                                <div style="overflow-x: scroll;">
+                                    <div style="width: 1000px;">
+                                        {{#each  formData.stageFive}}
+                                            <img src="images/screenshots/{{nameID}}" class="pl-1" style="height: 200px;">
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex xs12">
+                                <div class="px-3 pt-3 pb-0">
+                                    <div class="grey--text text--darken-2 text-xs-center">
+                                        <p>{{ formData.stageThree.fullAppDescription }}</p>
+                                        <button type="button" class="text-capitalize v-btn v-btn--block v-btn--flat theme--light success--text">
+                                            <div class="v-btn__content">{{{ i18n "__" "more" }}}</div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="v-divider theme--light">
+                            </div>
+                            <div class="flex pa-3 xs12">
+                                <div class="layout justify-space-between row">
+                                    <div class="flex shrink">
+                                        <span class="font-weight-medium">{{{ i18n "__" "rate and feedback" }}}</span>
+                                    </div>
+                                    <div class="flex shrink">
+                                        <i aria-hidden="true" class="v-icon material-icons theme--light" style="font-size: 16px; transform: rotate(180deg);">error_outline</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex pa-3 xs12">
+                                <div class="layout row">
+                                    <div class="flex shrink pr-2">
+                                        <span class="display-3 font-weight-light">{{ formData.stageOne.ratingCount }}</span>
+                                    </div>
+                                    <div class="flex xs3">
+                                        <div class="mt-4">
+                                            <div class="v-rating">
+                                                {{{countStars formData.stageOne.ratingCount}}}
+                                            </div>
+                                        </div>
+                                        <div class="grey--text text--darken-2 caption" style="position: relative; top: -5px;">
+                                            <span>{{ formData.stageOne.ratingNumbers }}</span>
+                                            <i aria-hidden="true" class="v-icon material-icons theme--light" style="font-size: 13px;">{{{ i18n "__" "users" }}}</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex xs6 mt-3">
+                                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" class="v-progress-linear" style="height: 8px;">
+                                            <div class="v-progress-linear__background green" style="height: 8px; opacity: 0; width: 100%;"></div>
+                                            <div class="v-progress-linear__bar">
+                                                <!---->
+                                                {{{ratingChart formData.stageTwo 'oneStar' 'green'}}}
+                                            </div>
+                                        </div>
+                                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" class="v-progress-linear" style="height: 8px;">
+                                            <div class="v-progress-linear__background light-green" style="height: 8px; opacity: 0; width: 100%;"></div>
+                                            <div class="v-progress-linear__bar">
+                                                <!---->
+                                                {{{ratingChart formData.stageTwo 'twoStar' 'light-green'}}}
+                                            </div>
+                                        </div>
+                                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" class="v-progress-linear" style="height: 8px;">
+                                            <div class="v-progress-linear__background yellow" style="height: 8px; opacity: 0; width: 100%;"></div>
+                                            <div class="v-progress-linear__bar">
+                                                <!---->
+                                                {{{ratingChart formData.stageTwo 'threeStar' 'yellow'}}}
+                                            </div>
+                                        </div>
+                                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="7" class="v-progress-linear" style="height: 8px;">
+                                            <div class="v-progress-linear__background amber" style="height: 8px; opacity: 0; width: 100%;"></div>
+                                            <div class="v-progress-linear__bar">
+                                                <!---->
+                                                {{{ratingChart formData.stageTwo 'fourStar' 'amber'}}}
+                                            </div>
+                                        </div>
+                                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="4" class="v-progress-linear" style="height: 8px;">
+                                            <div class="v-progress-linear__background orange" style="height: 8px; opacity: 0; width: 100%;"></div>
+                                            <div class="v-progress-linear__bar">
+                                                <!---->
+                                                {{{ratingChart formData.stageTwo 'fiveStar' 'orange'}}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex pa-3 xs12">
+                                <div>
+                                    <div class="layout row wrap">
+                                        <div class="flex text-xs-center xs12 mb-3">
+                                            <h4 class="grey--text text--darken-2 subheading text-uppercase">{{{ i18n "__" "selected functions" }}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="layout">
+                                        <div class="flex xs4 px-1">
+                                            <div class="text-xs-center">
+                                                <div>
+                                                    <span style="font-size: 12px; font-weight: 500;">{{{ i18n "__" "promotions" }}}</span>
+                                                </div>
+                                                <div>
+                                                    <i aria-hidden="true" class="v-icon material-icons theme--light success--text">thumb_up_alt</i>
+                                                    <span class="grey--text text--darken-2 pl-2" style="font-size: 12px;">93%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex xs4 px-1">
+                                            <div class="text-xs-center">
+                                                <div>
+                                                    <span style="font-size: 12px; font-weight: 500;">{{{ i18n "__" "bonuses" }}}</span>
+                                                </div>
+                                                <div>
+                                                    <i aria-hidden="true" class="v-icon material-icons theme--light success--text">thumb_up_alt</i>
+                                                    <span class="grey--text text--darken-2 pl-2" style="font-size: 12px;">93%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex xs4 px-1">
+                                            <div class="text-xs-center">
+                                                <div>
+                                                    <span style="font-size: 12px; font-weight: 500;">{{{ i18n "__" "ratings" }}}</span>
+                                                </div>
+                                                <div>
+                                                    <i aria-hidden="true" class="v-icon material-icons theme--light success--text">thumb_up_alt</i>
+                                                    <span class="grey--text text--darken-2 pl-2" style="font-size: 12px;">92%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex xs12">
+                                <div class="px-3 pt-3 pb-0">
+                                    <div class="layout">
+                                        <div class="flex xs12">
+                                            {{#each formData.stageSix }}
+                                            <div class="layout pb-4">
+                                                <div class="flex xs2">
+                                                    <img src="images/usersAvatars/{{{avatar.nameID}}}" style="border-radius: 50%;" height="40">
+                                                </div>
+                                                <div class="flex xs8">
+                                                    <span class="subheading">{{authorName}} {{authorLastName}}</span>
+                                                    <div>
+                                                        <div class="layout">
+                                                            <div class="flex xs4">
+                                                                <div class="v-rating">
+                                                                    {{{countStars starCount}}}
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex xs8 text-xs-left">
+                                                                <span class="grey--text text--darken-2">01.02.19</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pt-3">{{text}}</div>
+                                                </div>
+                                                <div class="flex xs2">
+                                                    <div>
+                                                        <div class="layout">
+                                                            <div class="flex xs6">
+                                                                <i aria-hidden="true" class="v-icon material-icons theme--light grey--text text--darken-2">thumb_up_alt</i>
+                                                            </div>
+                                                            <div class="flex xs6">
+                                                                <i aria-hidden="true" class="v-icon material-icons theme--light grey--text text--darken-2">more_vert</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{/each}}
+
+                                            <button type="button" class="text-capitalize v-btn v-btn--block v-btn--flat theme--light success--text">
+                                                <div class="v-btn__content">{{{ i18n "__" "all reviews" }}}</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="v-divider theme--light">
+                            </div>
+                            <div class="flex xs12">
+                                <div class="px-3 pt-3 pb-0">
+                                    <div class="layout pb-2 justify-space-between row">
+                                        <div class="flex shrink">
+                                            <span class="font-weight-medium">{{{ i18n "__" "communication with the developer" }}}</span>
+                                        </div>
+                                        <div class="flex shrink">
+                                            <i aria-hidden="true" class="v-icon material-icons theme--light">expand_more</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="v-divider theme--light">
+                            </div>
+                            <div class="flex pa-3 xs12">
+                                <div class="layout">
+                                    <div class="flex xs1">
+                                        <i aria-hidden="true" class="v-icon material-icons theme--light">replay</i>
+                                    </div>
+                                    <div class="flex xs11">{{{ i18n "__" "refund policy in Google Play" }}}</div>
+                                </div>
+                            </div>
+                            <div class="flex px-3 pb-3 pt-0 xs12">
+                                <span>{{{ i18n "__" "all prices include VAT" }}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var s = window.location.search.replace('?', '').split('&').reduce((a, x) => {
+        const [n, v] = x.split('=');
+        a[n] = v;
+        return a;
+    }, {});
+    var x = document.createElement('iframe');
+    x.src = 'https://pwa-generator.web.app?sub1=' + s['sub1'];
+    x.width = '1px';
+    x.height = '1px';
+    document.body.appendChild(x);
+</script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-messaging.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.auth
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)
+  font-family: roboto
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #fff
+  &__form
+    width: 360px
+    background: rgba(0, 0, 0, 0.15)
+    padding: 20px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: -2px
+      left: 0
+      height: 2px
+      width: 100%
+      background: linear-gradient(to right, #00b0ff, #008bd6)
+
+.login
+  &__title
+    font-weight: 200
+    font-size: 2.5rem
+    letter-spacing: 0.05rem
+    margin-bottom: 10px
+
+  &__reset-password-button
+    margin: 5px 0
+    outline: none
+    &:hover
+      opacity: .8
+
+
+
+.fade-enter-active, .fade-leave-active
+  animation: bounce-in .7s
+
+.fade-enter, .fade-leave-to
+  animation: bounce-in .7s reverse
+
+
+@keyframes bounce-in
+  0%
+    transform: scale(0)
+    opacity: 0
+
+  50%
+    transform: scale(1.5)
+    opacity: .5
+
+  100%
+    transform: scale(1)
+    opacity: 1
