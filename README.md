@@ -3,7 +3,7 @@
 
 
 
-This is a template generator with support for push messages and pwa in docker.
+This is a template generator with support push messages and pwa.
 
 Stack technologies: 
 
