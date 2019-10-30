@@ -13,7 +13,7 @@ Stack technologies:
 
 ## Installation and Usage
 
-The backend and frontend part are in docker containers.
+<p>The backend and frontend part are in docker containers.</p>
 
 For start docker run that command: 
 ```bash
@@ -25,3 +25,19 @@ This command stops and removes all images.
 ```bash
 $ docker-compose down --rmi all
 ```
+
+----
+
+####Test account: 
+
+ - login - `napad29272@mail8app.com`
+
+ - password - `qwerty`
+ 
+ ---
+
+Front-end starts on `localhost:8080`
+
+Backend starts on `localhost:3000`
+
+
