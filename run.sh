@@ -76,8 +76,7 @@ function runBackend {
     installImagemagick
 
     if [[ $(program_is_installed yarn) == 1 ]]; then
-        yarn install
-        yarn start
+        yarn install  && yarn start
     else
         npm i
         npm run start
@@ -87,11 +86,9 @@ function runBackend {
 function runFrontEnd {
     cd front-end/
     if [[ $(program_is_installed yarn) == 1 ]]; then
-        yarn install
-        yarn serve
+        yarn install && yarn serve
     else
-        npm i
-        npm run serve
+        npm i && npm run serve
     fi
 }
 
