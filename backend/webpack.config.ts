@@ -2,8 +2,6 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const imageminOptipng = require('imagemin-optipng');
 const path = require('path');
 
 module.exports = (urlPath: string) => {
@@ -77,11 +75,6 @@ module.exports = (urlPath: string) => {
       new MiniCssExtractPlugin({
         filename: 'css/style.css',
         allChunks: false,
-      }),
-      new ImageminPlugin({
-        pngquant: {
-          quality: '50',
-        },
       }),
       new OptimizeCssAssetsPlugin(),
       new CleanWebpackPlugin(),

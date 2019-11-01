@@ -39,14 +39,6 @@ bash run.sh
 
 > **Require node version "^8.13.0 || >=10.10.0".**
 
-> **Require imagemagick software.**
->
-> You may download it [here](https://imagemagick.org/script/download.php).
->
->Or use ```brew install imagemagick```
->
->Or just run this script, and imagemagick will be installed automatically, for all os except windows
-
 
 
 ----

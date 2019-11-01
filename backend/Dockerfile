@@ -1,7 +1,3 @@
-FROM keymetrics/pm2:latest-alpine
-RUN apk add --no-cache file
-RUN apk --update add imagemagick
-
 FROM node:12.6 AS build
 WORKDIR /backend
 
