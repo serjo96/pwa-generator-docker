@@ -9,5 +9,6 @@ README.md
 LICENSE
 .vscode
 /.idea
+/backend/src/View/images
 yarn-error.log
 yarn.lock

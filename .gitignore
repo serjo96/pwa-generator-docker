@@ -47,3 +47,6 @@ dist
 #lock files
 *yarn.lock
 *packages-lock.json
+
+/backend/src/View/images
+/backend/files
