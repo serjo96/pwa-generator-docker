@@ -97,6 +97,7 @@
 
                 <v-stepper-content step="5">
                     <StageFive
+                            :addSnackBarMessage="addSnackBarMessage"
                             :onUploadFiles="uploadFiles"
                             :fileResponse="fileResponse"
                             :stepData="formData.stageFive"

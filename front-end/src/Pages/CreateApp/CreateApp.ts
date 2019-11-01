@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import { Action, State } from 'vuex-class';
+import { Action, Mutation, State } from 'vuex-class';
 import { v1 as uuidv1 } from 'uuid';
 
 import { FilesActionPayloadInterface, FilesPayloadInterface } from '@/Store/Files/FilesInterfaces';
@@ -14,6 +14,7 @@ import StageThree from '@/components/CreateAppStages/StageThree/StageThree.vue';
 import StageFour from '@/components/CreateAppStages/StageFour/StageFour.vue';
 import StageFive from '@/components/CreateAppStages/StageFive/StageFive.vue';
 import StageSix from '@/components/CreateAppStages/StageSix/StageSix.vue';
+import { SnackBarInterface } from '@/Store/Global/Interfaces/Interface';
 
 Component.registerHooks([
     'beforeRouteLeave',
@@ -28,6 +29,7 @@ export default class CreateApp extends Vue {
     @Action public onSelectTemplate!: ({ id }: { id: string}) => void;
     @Action public onUploadFiles!: (payload: FilesActionPayloadInterface) => void;
     @Action public onBrakeForm!: ({ userID, appID}: { userID: string, appID: string }) => void;
+    @Mutation public addSnackBarMessage!: (message: SnackBarInterface) => void;
     @State((state) => state.UserModule.currentUser.uid) public UID!: string;
     @State((state) => state.Apps.isLoading) public isLoading!: boolean;
     @State((state) => state.Templates.templatesList) public templatesList!: TemplatesListInterfaces;
@@ -62,7 +64,6 @@ export default class CreateApp extends Vue {
         };
 
         this.createApp(createAppPayload);
-        // uploadToStore(this.formData, this.UID);
     }
 
     public generateUID() {

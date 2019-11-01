@@ -1,20 +1,21 @@
 import Vue from 'vue';
 import { Prop, Component } from 'vue-property-decorator';
-import { requireField, validateImageSize, validateImageSizeT } from '@/Helpers/FormValidate';
+import { requireField, validateImageSize } from '@/Helpers/FormValidate';
 import StageFiveInterface from '@/components/CreateAppStages/StageFive/StageFiveInterface';
+import { SnackBarInterface } from '@/Store/Global/Interfaces/Interface';
 
 @Component({ })
 export default class StageFive extends Vue {
     @Prop(Function) public nextStep!: () => void;
     @Prop(Function) public prevStep!: () => void;
     @Prop(Function) public submitStepData!: (name: string, data: any) => void;
+    @Prop(Function) public addSnackBarMessage!: (message: SnackBarInterface) => void;
 
     public listOfInputs: StageFiveInterface[] = [];
     public count: number = 0;
 
     public fieldRules = {
         requireField,
-        validateSize: this.onValidateSize,
     };
 
     get disabledButton() {
@@ -48,10 +49,6 @@ export default class StageFive extends Vue {
         this.prevStep();
     }
 
-    public pickFile() {
-        (this.$refs.image as HTMLInputElement).click ();
-    }
-
     public onFilePicked(file: File, inputIndex: number, id: string) {
         const screenshotsList = (this as any).listOfInputs[inputIndex];
         if (file) {
@@ -68,31 +65,14 @@ export default class StageFive extends Vue {
                             screenshotsList.nameID = newFile.name;
                             screenshotsList.name = file.name;
                         } else {
-                            console.log('Размеры изображения должны быть не менее 200 и не более 750');
+                            this.addSnackBarMessage({
+                                message: 'Image sizes must be at least 200px and not more than 750px',
+                                color: 'error',
+                            });
                         }
                     })
                     .catch((err) =>  new Error(err));
             });
         }
     }
-
-    public onValidateSize(file: File) {
-        if (file) {
-            const fr = new FileReader ();
-            fr.readAsDataURL(file);
-            fr.addEventListener('load', () => {
-                const res = fr.result as any;
-                validateImageSize(res, { min: 200, max: 750} )
-                    .then((res) => {
-                        if (res) {
-                            return 'lol';
-                        } else {
-                            return 'Размеры изображения должны быть не менее 200px и не более 750px';
-                        }
-                    })
-                    .catch((err) =>  new Error(err));
-            });
-        }
-    }
-
 }
