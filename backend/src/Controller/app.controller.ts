@@ -32,8 +32,8 @@ import * as Url from 'url';
 import { ImageValidator } from '../Helpers/ImageValidator';
 import { toValidateImageDto } from '../Helpers/toUploadImageDto';
 import { getApplicationFilePath, getApplicationFolderPath, getTemplateFilePath, getTemplateFolderPath } from '../Helpers/ApplicationFolderHelper';
+import { ImageResizeHelper } from '../Helpers/ResizeImagesHelper';
 
-const removeFile = util.promisify(fs.unlink);
 const readFile = util.promisify(fs.readFile);
 
 const storage = {
@@ -94,15 +94,11 @@ const imageUploadDataStorage = {
       if (!fs.existsSync(path)) {
         mkDirByPathSync(path, { sep: '/' });
       }
-
       callback(null, path);
     },
 
     filename: (req, file, callback) => {
-      const {name: fileName } = req.body;
-      const format = file.originalname.split('.')[1];
-
-      return callback(null, `${fileName}.${format}`);
+      return callback(null, file.originalname);
     },
   }),
 };
@@ -234,15 +230,18 @@ export class AppController {
   async uploadImage(@Req() req, @UploadedFile('file') file, @Body() uploadImageDto: any) {
     try {
       const { needValidate = false } = req.query;
+      const imageDto = toValidateImageDto(req.body);
+      const { dimension } = imageDto;
+      const {name: fileName } = req.body;
 
       if (needValidate) {
-        const imageDto = toValidateImageDto(req.body);
         await ImageValidator.validate(imageDto, file.path);
       }
 
+      await ImageResizeHelper(file, dimension, fileName);
+
       return JSON.stringify({ status: 'OK', path: file.path });
     } catch (error) {
-      await removeFile(file.path);
       throw new HttpException({ errors: error }, 400);
     }
   }
