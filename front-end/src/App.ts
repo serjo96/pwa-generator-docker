@@ -7,10 +7,10 @@ import {  Action } from 'vuex-class';
 })
 export default class App extends Vue {
 
-	@Action public onAuthChange: any;
+    @Action public onAuthChange: any;
 
-	public created() {
-		this.onAuthChange();
-	}
+    public created() {
+        this.onAuthChange();
+    }
 
 }

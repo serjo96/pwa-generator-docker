@@ -5,9 +5,9 @@ import 'vuetify/dist/vuetify.min.css';
 Vue.use(Vuetify);
 
 export default new Vuetify(
-	{
-		icons: {
-			iconfont: 'md', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
-		},
-	},
+    {
+        icons: {
+            iconfont: 'md', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
+        },
+    },
 );

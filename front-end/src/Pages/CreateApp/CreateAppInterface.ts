@@ -6,21 +6,21 @@ import StageFiveInterface from '@/components/CreateAppStages/StageFive/StageFive
 import StageSixInterface from '@/components/CreateAppStages/StageSix/StageSixInterface';
 
 export interface CreateAppInterface {
-		stageOne: StageOneInterface;
-		stageTwo: StageTwoInterface;
-		stageThree: StageThreeInterface;
-		stageFour: StageFourInterface;
-		stageFive: StageFiveInterface[];
-		stageSix: StageSixInterface[];
+        stageOne: StageOneInterface;
+        stageTwo: StageTwoInterface;
+        stageThree: StageThreeInterface;
+        stageFour: StageFourInterface;
+        stageFive: StageFiveInterface[];
+        stageSix: StageSixInterface[];
 }
 
 
 export class AppInterface implements CreateAppInterface {
-		public stageOne!: StageOneInterface;
-		public stageTwo!: StageTwoInterface;
-		public stageThree!: StageThreeInterface;
-		public stageFour!: StageFourInterface;
-		public stageFive!: StageFiveInterface[];
-		public stageSix!: StageSixInterface[];
+        public stageOne!: StageOneInterface;
+        public stageTwo!: StageTwoInterface;
+        public stageThree!: StageThreeInterface;
+        public stageFour!: StageFourInterface;
+        public stageFive!: StageFiveInterface[];
+        public stageSix!: StageSixInterface[];
 }
 

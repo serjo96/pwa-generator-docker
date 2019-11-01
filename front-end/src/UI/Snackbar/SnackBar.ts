@@ -8,24 +8,24 @@ import { SnackBarInterface } from '@/Store/Global/Interfaces/Interface';
 
 })
 export default class SnackBar extends Vue {
-	public show: boolean = false;
-	public timeout: number = 4000;
+    public show: boolean = false;
+    public timeout: number = 4000;
 
-	@Mutation public clearSnackBar: any;
-	@State((state) => state.Global.snackBarData) public snackBar!: SnackBarInterface;
+    @Mutation public clearSnackBar: any;
+    @State((state) => state.Global.snackBarData) public snackBar!: SnackBarInterface;
 
-	@Watch('show')
-	public onClearSnackBar(val: boolean) {
-		if (!val) {
-			this.clearSnackBar();
-		}
-	}
+    @Watch('show')
+    public onClearSnackBar(val: boolean) {
+        if (!val) {
+            this.clearSnackBar();
+        }
+    }
 
-	@Watch('snackBar', { deep: true})
-	public showSnackBar(val: SnackBarInterface) {
-		if (val.message) {
-			this.show = true;
-		}
-	}
+    @Watch('snackBar', { deep: true})
+    public showSnackBar(val: SnackBarInterface) {
+        if (val.message) {
+            this.show = true;
+        }
+    }
 
 }

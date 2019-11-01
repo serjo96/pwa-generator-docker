@@ -1,12 +1,12 @@
 export interface TemplatesInterfaces {
-	formData: FormData;
-	images: Array<{
-		name: string;
-		path: string;
-	}>;
+    formData: FormData;
+    images: Array<{
+        name: string;
+        path: string;
+    }>;
 }
 
 export interface TemplatesListInterfaces {
-	name: string;
-	id: string;
+    name: string;
+    id: string;
 }

@@ -6,7 +6,7 @@ import Header from '@/components/Header/Header';
 
 
 @Component({
-	components: { Header, SnackBar},
+    components: { Header, SnackBar},
 })
 export default class MainPage extends Vue {
 

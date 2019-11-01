@@ -4,8 +4,8 @@ import Preloader from '@/UI/Preloader/Preloader.vue';
 
 
 @Component({
-	components: { Preloader },
+    components: { Preloader },
 })
 export default class WrapperPreloader extends Vue {
-	@Prop(Boolean) public status!: boolean;
+    @Prop(Boolean) public status!: boolean;
 }

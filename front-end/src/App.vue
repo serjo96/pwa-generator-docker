@@ -7,7 +7,4 @@
 </template>
 
 <script lang="ts" src="./App.ts"></script>
-
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

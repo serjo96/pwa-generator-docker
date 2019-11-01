@@ -12,13 +12,13 @@ import Files from '@/Store/Files/Files';
 Vue.use(Vuex);
 
 export default new Store < State > ({
-	modules: {
-		Global,
-		UserModule,
-		Auth,
-		Apps,
-		Templates,
-		Files,
-		Push,
-	},
+    modules: {
+        Global,
+        UserModule,
+        Auth,
+        Apps,
+        Templates,
+        Files,
+        Push,
+    },
 });

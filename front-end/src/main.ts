@@ -24,8 +24,8 @@ Vue.use(Vuex);
 
 /* eslint-disable no-new */
 new Vue({
-	router: Route,
-	store,
-	vuetify,
-	render: (h) => h(App),
+    router: Route,
+    store,
+    vuetify,
+    render: (h) => h(App),
 }).$mount('#app');

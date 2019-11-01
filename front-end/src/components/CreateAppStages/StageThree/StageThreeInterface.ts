@@ -1,5 +1,5 @@
 export default interface StageThreeInterface {
-	lastAppChanges: string;
-	fullAppDescription: string;
-	shortDescription: string;
+    lastAppChanges: string;
+    fullAppDescription: string;
+    shortDescription: string;
 }
